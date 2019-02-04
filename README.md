@@ -142,3 +142,11 @@ clustered around the circumference of a field-wire. How much slower, if
 at all, arrive charges from outside a cell, near the calo walls or from 
 between foil and first tracker cells?
 
+## Simulation geometry
+
+As described above, three complete tracker cell units of 9 cells each are in the geometry with the correct distances around the perimeter to the main calorimeter and the source foil. Just the distance to the X-wall is 4 mm short on either side. 
+In coordinates, the COMSOL geometry dictates what the ROOT geometry has to follow. The project student who made the COMSOL model had for some reason a preference for the lower right corner in the Cartesian plane...
+
+Therefore, the absolute locations of boundaries and tracker wires sit at positive x-coordinate values but negative y-coordinate values. The top left corner of the COMSOL volume sits at the absolute origin (0,0). The COMSOL chamber extends in y-direction to 43.4 cm. The centres of the nearest field-wires to the main calorimeter wall sit at y = -7 mm. The centres of the field-wires nearest to the source foil sit at y = -40.3 cm, after which there is a 2 mm gap and a 29 mm gap to the source foil, like in the Falaise MC geometry version 4.x. The 9 cells of a tracker cell unit extend in -y direction. 
+
+In x-direction, one X-wall is at x = 0, the nearest field-wires sit at x = 14 mm. A good guide-point for orientation can also be the most top-left anode wire at x = 3.6 cm and y = -2.9 cm. Staying close to it is the default location for the executable example. The three layers of 9-cell units extend in x-direction.
