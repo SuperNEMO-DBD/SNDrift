@@ -1,0 +1,1176 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+  <define>
+    <position name="FWire_0inComsolpos" x="-5.3109999999999999" y="21" z="0" unit="cm"/>
+    <position name="FWire_1inComsolpos" x="-4.4000000000000004" y="21" z="0" unit="cm"/>
+    <position name="FWire_2inComsolpos" x="-3.4889999999999999" y="21" z="0" unit="cm"/>
+    <position name="FWire_3inComsolpos" x="-6.5999999999999996" y="19.710999999999999" z="0" unit="cm"/>
+    <position name="FWire_4inComsolpos" x="-6.5999999999999996" y="18.799999999999997" z="0" unit="cm"/>
+    <position name="AWire_0inComsolpos" x="-4.3999999999999995" y="18.799999999999997" z="0" unit="cm"/>
+    <position name="FWire_5inComsolpos" x="-6.5999999999999996" y="17.888999999999999" z="0" unit="cm"/>
+    <position name="FWire_6inComsolpos" x="-0.91099999999999959" y="21" z="0" unit="cm"/>
+    <position name="FWire_7inComsolpos" x="0" y="21" z="0" unit="cm"/>
+    <position name="FWire_8inComsolpos" x="0.91100000000000048" y="21" z="0" unit="cm"/>
+    <position name="FWire_9inComsolpos" x="-2.1999999999999993" y="19.710999999999999" z="0" unit="cm"/>
+    <position name="FWire_10inComsolpos" x="-2.1999999999999993" y="18.799999999999997" z="0" unit="cm"/>
+    <position name="AWire_1inComsolpos" x="8.8817841970012523e-16" y="18.799999999999997" z="0" unit="cm"/>
+    <position name="FWire_11inComsolpos" x="-2.1999999999999993" y="17.888999999999999" z="0" unit="cm"/>
+    <position name="FWire_12inComsolpos" x="3.4890000000000008" y="21" z="0" unit="cm"/>
+    <position name="FWire_13inComsolpos" x="4.4000000000000004" y="21" z="0" unit="cm"/>
+    <position name="FWire_14inComsolpos" x="5.3110000000000008" y="21" z="0" unit="cm"/>
+    <position name="FWire_15inComsolpos" x="2.2000000000000011" y="19.710999999999999" z="0" unit="cm"/>
+    <position name="FWire_16inComsolpos" x="2.2000000000000011" y="18.799999999999997" z="0" unit="cm"/>
+    <position name="AWire_2inComsolpos" x="4.4000000000000012" y="18.799999999999997" z="0" unit="cm"/>
+    <position name="FWire_17inComsolpos" x="2.2000000000000011" y="17.888999999999999" z="0" unit="cm"/>
+    <position name="FWire_21inComsolpos" x="-5.3109999999999999" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_22inComsolpos" x="-4.4000000000000004" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_23inComsolpos" x="-3.4889999999999999" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_24inComsolpos" x="-6.5999999999999996" y="15.310999999999998" z="0" unit="cm"/>
+    <position name="FWire_25inComsolpos" x="-6.5999999999999996" y="14.399999999999997" z="0" unit="cm"/>
+    <position name="AWire_3inComsolpos" x="-4.3999999999999995" y="14.399999999999997" z="0" unit="cm"/>
+    <position name="FWire_26inComsolpos" x="-6.5999999999999996" y="13.488999999999999" z="0" unit="cm"/>
+    <position name="FWire_27inComsolpos" x="-0.91099999999999959" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_28inComsolpos" x="0" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_29inComsolpos" x="0.91100000000000048" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_30inComsolpos" x="-2.1999999999999993" y="15.310999999999998" z="0" unit="cm"/>
+    <position name="FWire_31inComsolpos" x="-2.1999999999999993" y="14.399999999999997" z="0" unit="cm"/>
+    <position name="AWire_4inComsolpos" x="8.8817841970012523e-16" y="14.399999999999997" z="0" unit="cm"/>
+    <position name="FWire_32inComsolpos" x="-2.1999999999999993" y="13.488999999999999" z="0" unit="cm"/>
+    <position name="FWire_33inComsolpos" x="3.4890000000000008" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_34inComsolpos" x="4.4000000000000004" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_35inComsolpos" x="5.3110000000000008" y="16.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_36inComsolpos" x="2.2000000000000011" y="15.310999999999998" z="0" unit="cm"/>
+    <position name="FWire_37inComsolpos" x="2.2000000000000011" y="14.399999999999997" z="0" unit="cm"/>
+    <position name="AWire_5inComsolpos" x="4.4000000000000012" y="14.399999999999997" z="0" unit="cm"/>
+    <position name="FWire_38inComsolpos" x="2.2000000000000011" y="13.488999999999999" z="0" unit="cm"/>
+    <position name="FWire_42inComsolpos" x="-5.3109999999999999" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_43inComsolpos" x="-4.4000000000000004" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_44inComsolpos" x="-3.4889999999999999" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_45inComsolpos" x="-6.5999999999999996" y="10.910999999999998" z="0" unit="cm"/>
+    <position name="FWire_46inComsolpos" x="-6.5999999999999996" y="9.9999999999999964" z="0" unit="cm"/>
+    <position name="AWire_6inComsolpos" x="-4.3999999999999995" y="9.9999999999999964" z="0" unit="cm"/>
+    <position name="FWire_47inComsolpos" x="-6.5999999999999996" y="9.0889999999999986" z="0" unit="cm"/>
+    <position name="FWire_48inComsolpos" x="-0.91099999999999959" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_49inComsolpos" x="0" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_50inComsolpos" x="0.91100000000000048" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_51inComsolpos" x="-2.1999999999999993" y="10.910999999999998" z="0" unit="cm"/>
+    <position name="FWire_52inComsolpos" x="-2.1999999999999993" y="9.9999999999999964" z="0" unit="cm"/>
+    <position name="AWire_7inComsolpos" x="8.8817841970012523e-16" y="9.9999999999999964" z="0" unit="cm"/>
+    <position name="FWire_53inComsolpos" x="-2.1999999999999993" y="9.0889999999999986" z="0" unit="cm"/>
+    <position name="FWire_54inComsolpos" x="3.4890000000000008" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_55inComsolpos" x="4.4000000000000004" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_56inComsolpos" x="5.3110000000000008" y="12.199999999999999" z="0" unit="cm"/>
+    <position name="FWire_57inComsolpos" x="2.2000000000000011" y="10.910999999999998" z="0" unit="cm"/>
+    <position name="FWire_58inComsolpos" x="2.2000000000000011" y="9.9999999999999964" z="0" unit="cm"/>
+    <position name="AWire_8inComsolpos" x="4.4000000000000012" y="9.9999999999999964" z="0" unit="cm"/>
+    <position name="FWire_59inComsolpos" x="2.2000000000000011" y="9.0889999999999986" z="0" unit="cm"/>
+    <position name="FWire_63inComsolpos" x="-5.3109999999999999" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_64inComsolpos" x="-4.4000000000000004" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_65inComsolpos" x="-3.4889999999999999" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_66inComsolpos" x="-6.5999999999999996" y="6.5109999999999975" z="0" unit="cm"/>
+    <position name="FWire_67inComsolpos" x="-6.5999999999999996" y="5.5999999999999961" z="0" unit="cm"/>
+    <position name="AWire_9inComsolpos" x="-4.3999999999999995" y="5.5999999999999961" z="0" unit="cm"/>
+    <position name="FWire_68inComsolpos" x="-6.5999999999999996" y="4.6889999999999983" z="0" unit="cm"/>
+    <position name="FWire_69inComsolpos" x="-0.91099999999999959" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_70inComsolpos" x="0" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_71inComsolpos" x="0.91100000000000048" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_72inComsolpos" x="-2.1999999999999993" y="6.5109999999999975" z="0" unit="cm"/>
+    <position name="FWire_73inComsolpos" x="-2.1999999999999993" y="5.5999999999999961" z="0" unit="cm"/>
+    <position name="AWire_10inComsolpos" x="8.8817841970012523e-16" y="5.5999999999999961" z="0" unit="cm"/>
+    <position name="FWire_74inComsolpos" x="-2.1999999999999993" y="4.6889999999999983" z="0" unit="cm"/>
+    <position name="FWire_75inComsolpos" x="3.4890000000000008" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_76inComsolpos" x="4.4000000000000004" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_77inComsolpos" x="5.3110000000000008" y="7.7999999999999989" z="0" unit="cm"/>
+    <position name="FWire_78inComsolpos" x="2.2000000000000011" y="6.5109999999999975" z="0" unit="cm"/>
+    <position name="FWire_79inComsolpos" x="2.2000000000000011" y="5.5999999999999961" z="0" unit="cm"/>
+    <position name="AWire_11inComsolpos" x="4.4000000000000012" y="5.5999999999999961" z="0" unit="cm"/>
+    <position name="FWire_80inComsolpos" x="2.2000000000000011" y="4.6889999999999983" z="0" unit="cm"/>
+    <position name="FWire_84inComsolpos" x="-5.3109999999999999" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_85inComsolpos" x="-4.4000000000000004" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_86inComsolpos" x="-3.4889999999999999" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_87inComsolpos" x="-6.5999999999999996" y="2.1109999999999971" z="0" unit="cm"/>
+    <position name="FWire_88inComsolpos" x="-6.5999999999999996" y="1.1999999999999957" z="0" unit="cm"/>
+    <position name="AWire_12inComsolpos" x="-4.3999999999999995" y="1.1999999999999957" z="0" unit="cm"/>
+    <position name="FWire_89inComsolpos" x="-6.5999999999999996" y="0.28899999999999793" z="0" unit="cm"/>
+    <position name="FWire_90inComsolpos" x="-0.91099999999999959" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_91inComsolpos" x="0" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_92inComsolpos" x="0.91100000000000048" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_93inComsolpos" x="-2.1999999999999993" y="2.1109999999999971" z="0" unit="cm"/>
+    <position name="FWire_94inComsolpos" x="-2.1999999999999993" y="1.1999999999999957" z="0" unit="cm"/>
+    <position name="AWire_13inComsolpos" x="8.8817841970012523e-16" y="1.1999999999999957" z="0" unit="cm"/>
+    <position name="FWire_95inComsolpos" x="-2.1999999999999993" y="0.28899999999999793" z="0" unit="cm"/>
+    <position name="FWire_96inComsolpos" x="3.4890000000000008" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_97inComsolpos" x="4.4000000000000004" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_98inComsolpos" x="5.3110000000000008" y="3.3999999999999986" z="0" unit="cm"/>
+    <position name="FWire_99inComsolpos" x="2.2000000000000011" y="2.1109999999999971" z="0" unit="cm"/>
+    <position name="FWire_100inComsolpos" x="2.2000000000000011" y="1.1999999999999957" z="0" unit="cm"/>
+    <position name="AWire_14inComsolpos" x="4.4000000000000012" y="1.1999999999999957" z="0" unit="cm"/>
+    <position name="FWire_101inComsolpos" x="2.2000000000000011" y="0.28899999999999793" z="0" unit="cm"/>
+    <position name="FWire_105inComsolpos" x="-5.3109999999999999" y="-1" z="0" unit="cm"/>
+    <position name="FWire_106inComsolpos" x="-4.4000000000000004" y="-1" z="0" unit="cm"/>
+    <position name="FWire_107inComsolpos" x="-3.4889999999999999" y="-1" z="0" unit="cm"/>
+    <position name="FWire_108inComsolpos" x="-6.5999999999999996" y="-2.2890000000000015" z="0" unit="cm"/>
+    <position name="FWire_109inComsolpos" x="-6.5999999999999996" y="-3.2000000000000028" z="0" unit="cm"/>
+    <position name="AWire_15inComsolpos" x="-4.3999999999999995" y="-3.2000000000000028" z="0" unit="cm"/>
+    <position name="FWire_110inComsolpos" x="-6.5999999999999996" y="-4.1110000000000007" z="0" unit="cm"/>
+    <position name="FWire_111inComsolpos" x="-0.91099999999999959" y="-1" z="0" unit="cm"/>
+    <position name="FWire_112inComsolpos" x="0" y="-1" z="0" unit="cm"/>
+    <position name="FWire_113inComsolpos" x="0.91100000000000048" y="-1" z="0" unit="cm"/>
+    <position name="FWire_114inComsolpos" x="-2.1999999999999993" y="-2.2890000000000015" z="0" unit="cm"/>
+    <position name="FWire_115inComsolpos" x="-2.1999999999999993" y="-3.2000000000000028" z="0" unit="cm"/>
+    <position name="AWire_16inComsolpos" x="8.8817841970012523e-16" y="-3.2000000000000028" z="0" unit="cm"/>
+    <position name="FWire_116inComsolpos" x="-2.1999999999999993" y="-4.1110000000000007" z="0" unit="cm"/>
+    <position name="FWire_117inComsolpos" x="3.4890000000000008" y="-1" z="0" unit="cm"/>
+    <position name="FWire_118inComsolpos" x="4.4000000000000004" y="-1" z="0" unit="cm"/>
+    <position name="FWire_119inComsolpos" x="5.3110000000000008" y="-1" z="0" unit="cm"/>
+    <position name="FWire_120inComsolpos" x="2.2000000000000011" y="-2.2890000000000015" z="0" unit="cm"/>
+    <position name="FWire_121inComsolpos" x="2.2000000000000011" y="-3.2000000000000028" z="0" unit="cm"/>
+    <position name="AWire_17inComsolpos" x="4.4000000000000012" y="-3.2000000000000028" z="0" unit="cm"/>
+    <position name="FWire_122inComsolpos" x="2.2000000000000011" y="-4.1110000000000007" z="0" unit="cm"/>
+    <position name="FWire_126inComsolpos" x="-5.3109999999999999" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_127inComsolpos" x="-4.4000000000000004" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_128inComsolpos" x="-3.4889999999999999" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_129inComsolpos" x="-6.5999999999999996" y="-6.6890000000000036" z="0" unit="cm"/>
+    <position name="FWire_130inComsolpos" x="-6.5999999999999996" y="-7.600000000000005" z="0" unit="cm"/>
+    <position name="AWire_18inComsolpos" x="-4.3999999999999995" y="-7.600000000000005" z="0" unit="cm"/>
+    <position name="FWire_131inComsolpos" x="-6.5999999999999996" y="-8.5110000000000028" z="0" unit="cm"/>
+    <position name="FWire_132inComsolpos" x="-0.91099999999999959" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_133inComsolpos" x="0" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_134inComsolpos" x="0.91100000000000048" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_135inComsolpos" x="-2.1999999999999993" y="-6.6890000000000036" z="0" unit="cm"/>
+    <position name="FWire_136inComsolpos" x="-2.1999999999999993" y="-7.600000000000005" z="0" unit="cm"/>
+    <position name="AWire_19inComsolpos" x="8.8817841970012523e-16" y="-7.600000000000005" z="0" unit="cm"/>
+    <position name="FWire_137inComsolpos" x="-2.1999999999999993" y="-8.5110000000000028" z="0" unit="cm"/>
+    <position name="FWire_138inComsolpos" x="3.4890000000000008" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_139inComsolpos" x="4.4000000000000004" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_140inComsolpos" x="5.3110000000000008" y="-5.4000000000000021" z="0" unit="cm"/>
+    <position name="FWire_141inComsolpos" x="2.2000000000000011" y="-6.6890000000000036" z="0" unit="cm"/>
+    <position name="FWire_142inComsolpos" x="2.2000000000000011" y="-7.600000000000005" z="0" unit="cm"/>
+    <position name="AWire_20inComsolpos" x="4.4000000000000012" y="-7.600000000000005" z="0" unit="cm"/>
+    <position name="FWire_143inComsolpos" x="2.2000000000000011" y="-8.5110000000000028" z="0" unit="cm"/>
+    <position name="FWire_147inComsolpos" x="-5.3109999999999999" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_148inComsolpos" x="-4.4000000000000004" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_149inComsolpos" x="-3.4889999999999999" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_150inComsolpos" x="-6.5999999999999996" y="-11.089000000000006" z="0" unit="cm"/>
+    <position name="FWire_151inComsolpos" x="-6.5999999999999996" y="-12.000000000000007" z="0" unit="cm"/>
+    <position name="AWire_21inComsolpos" x="-4.3999999999999995" y="-12.000000000000007" z="0" unit="cm"/>
+    <position name="FWire_152inComsolpos" x="-6.5999999999999996" y="-12.911000000000005" z="0" unit="cm"/>
+    <position name="FWire_153inComsolpos" x="-0.91099999999999959" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_154inComsolpos" x="0" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_155inComsolpos" x="0.91100000000000048" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_156inComsolpos" x="-2.1999999999999993" y="-11.089000000000006" z="0" unit="cm"/>
+    <position name="FWire_157inComsolpos" x="-2.1999999999999993" y="-12.000000000000007" z="0" unit="cm"/>
+    <position name="AWire_22inComsolpos" x="8.8817841970012523e-16" y="-12.000000000000007" z="0" unit="cm"/>
+    <position name="FWire_158inComsolpos" x="-2.1999999999999993" y="-12.911000000000005" z="0" unit="cm"/>
+    <position name="FWire_159inComsolpos" x="3.4890000000000008" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_160inComsolpos" x="4.4000000000000004" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_161inComsolpos" x="5.3110000000000008" y="-9.8000000000000043" z="0" unit="cm"/>
+    <position name="FWire_162inComsolpos" x="2.2000000000000011" y="-11.089000000000006" z="0" unit="cm"/>
+    <position name="FWire_163inComsolpos" x="2.2000000000000011" y="-12.000000000000007" z="0" unit="cm"/>
+    <position name="AWire_23inComsolpos" x="4.4000000000000012" y="-12.000000000000007" z="0" unit="cm"/>
+    <position name="FWire_164inComsolpos" x="2.2000000000000011" y="-12.911000000000005" z="0" unit="cm"/>
+    <position name="FWire_168inComsolpos" x="-5.3109999999999999" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_169inComsolpos" x="-4.4000000000000004" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_170inComsolpos" x="-3.4889999999999999" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_171inComsolpos" x="-6.5999999999999996" y="-15.489000000000004" z="0" unit="cm"/>
+    <position name="FWire_172inComsolpos" x="-6.5999999999999996" y="-16.400000000000006" z="0" unit="cm"/>
+    <position name="AWire_24inComsolpos" x="-4.3999999999999995" y="-16.400000000000006" z="0" unit="cm"/>
+    <position name="FWire_173inComsolpos" x="-6.5999999999999996" y="-17.311000000000003" z="0" unit="cm"/>
+    <position name="FWire_174inComsolpos" x="-0.91099999999999959" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_175inComsolpos" x="0" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_176inComsolpos" x="0.91100000000000048" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_177inComsolpos" x="-2.1999999999999993" y="-15.489000000000004" z="0" unit="cm"/>
+    <position name="FWire_178inComsolpos" x="-2.1999999999999993" y="-16.400000000000006" z="0" unit="cm"/>
+    <position name="AWire_25inComsolpos" x="8.8817841970012523e-16" y="-16.400000000000006" z="0" unit="cm"/>
+    <position name="FWire_179inComsolpos" x="-2.1999999999999993" y="-17.311000000000003" z="0" unit="cm"/>
+    <position name="FWire_180inComsolpos" x="3.4890000000000008" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_181inComsolpos" x="4.4000000000000004" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_182inComsolpos" x="5.3110000000000008" y="-14.200000000000003" z="0" unit="cm"/>
+    <position name="FWire_183inComsolpos" x="2.2000000000000011" y="-15.489000000000004" z="0" unit="cm"/>
+    <position name="FWire_184inComsolpos" x="2.2000000000000011" y="-16.400000000000006" z="0" unit="cm"/>
+    <position name="AWire_26inComsolpos" x="4.4000000000000012" y="-16.400000000000006" z="0" unit="cm"/>
+    <position name="FWire_185inComsolpos" x="2.2000000000000011" y="-17.311000000000003" z="0" unit="cm"/>
+    <position name="FWire_194inComsolpos" x="-5.3109999999999999" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_195inComsolpos" x="-4.4000000000000004" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_196inComsolpos" x="-3.4889999999999999" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_197inComsolpos" x="-0.91099999999999959" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_198inComsolpos" x="0" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_199inComsolpos" x="0.91100000000000048" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_200inComsolpos" x="3.4890000000000008" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_201inComsolpos" x="4.4000000000000004" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_202inComsolpos" x="5.3110000000000008" y="-18.600000000000001" z="0" unit="cm"/>
+    <position name="FWire_18inComsolpos" x="6.6000000000000014" y="19.710999999999999" z="0" unit="cm"/>
+    <position name="FWire_19inComsolpos" x="6.6000000000000014" y="18.799999999999997" z="0" unit="cm"/>
+    <position name="FWire_20inComsolpos" x="6.6000000000000014" y="17.888999999999999" z="0" unit="cm"/>
+    <position name="FWire_39inComsolpos" x="6.6000000000000014" y="15.310999999999998" z="0" unit="cm"/>
+    <position name="FWire_40inComsolpos" x="6.6000000000000014" y="14.399999999999997" z="0" unit="cm"/>
+    <position name="FWire_41inComsolpos" x="6.6000000000000014" y="13.488999999999999" z="0" unit="cm"/>
+    <position name="FWire_60inComsolpos" x="6.6000000000000014" y="10.910999999999998" z="0" unit="cm"/>
+    <position name="FWire_61inComsolpos" x="6.6000000000000014" y="9.9999999999999964" z="0" unit="cm"/>
+    <position name="FWire_62inComsolpos" x="6.6000000000000014" y="9.0889999999999986" z="0" unit="cm"/>
+    <position name="FWire_81inComsolpos" x="6.6000000000000014" y="6.5109999999999975" z="0" unit="cm"/>
+    <position name="FWire_82inComsolpos" x="6.6000000000000014" y="5.5999999999999961" z="0" unit="cm"/>
+    <position name="FWire_83inComsolpos" x="6.6000000000000014" y="4.6889999999999983" z="0" unit="cm"/>
+    <position name="FWire_102inComsolpos" x="6.6000000000000014" y="2.1109999999999971" z="0" unit="cm"/>
+    <position name="FWire_103inComsolpos" x="6.6000000000000014" y="1.1999999999999957" z="0" unit="cm"/>
+    <position name="FWire_104inComsolpos" x="6.6000000000000014" y="0.28899999999999793" z="0" unit="cm"/>
+    <position name="FWire_123inComsolpos" x="6.6000000000000014" y="-2.2890000000000015" z="0" unit="cm"/>
+    <position name="FWire_124inComsolpos" x="6.6000000000000014" y="-3.2000000000000028" z="0" unit="cm"/>
+    <position name="FWire_125inComsolpos" x="6.6000000000000014" y="-4.1110000000000007" z="0" unit="cm"/>
+    <position name="FWire_144inComsolpos" x="6.6000000000000014" y="-6.6890000000000036" z="0" unit="cm"/>
+    <position name="FWire_145inComsolpos" x="6.6000000000000014" y="-7.600000000000005" z="0" unit="cm"/>
+    <position name="FWire_146inComsolpos" x="6.6000000000000014" y="-8.5110000000000028" z="0" unit="cm"/>
+    <position name="FWire_165inComsolpos" x="6.6000000000000014" y="-11.089000000000006" z="0" unit="cm"/>
+    <position name="FWire_166inComsolpos" x="6.6000000000000014" y="-12.000000000000007" z="0" unit="cm"/>
+    <position name="FWire_167inComsolpos" x="6.6000000000000014" y="-12.911000000000005" z="0" unit="cm"/>
+    <position name="FWire_186inComsolpos" x="6.6000000000000014" y="-15.489000000000004" z="0" unit="cm"/>
+    <position name="FWire_187inComsolpos" x="6.6000000000000014" y="-16.400000000000006" z="0" unit="cm"/>
+    <position name="FWire_188inComsolpos" x="6.6000000000000014" y="-17.311000000000003" z="0" unit="cm"/>
+    <position name="Comsol_1inWorldpos" x="8" y="-21.699999999999999" z="0" unit="cm"/>
+  </define>
+  <materials>
+    <material name="Vacuum" Z="1">
+      <D unit="g/cm3" value="9.9999999999999995e-21"/>
+      <atom unit="g/mole" value="0"/>
+    </material>
+    <material name="He" Z="2">
+      <D unit="g/cm3" value="9.9999999999999995e-21"/>
+      <atom unit="g/mole" value="4"/>
+    </material>
+    <material name="Al" Z="13">
+      <D unit="g/cm3" value="2.7000000000000002"/>
+      <atom unit="g/mole" value="26"/>
+    </material>
+  </materials>
+  <solids>
+    <box name="World" x="64.200000000000003" y="173.79999999999998" z="4.2000000000000002" lunit="cm"/>
+    <box name="Comsol0x1" x="16" y="43.399999999999999" z="4" lunit="cm"/>
+    <tube name="C" rmin="0" rmax="0.0025000000000000001" z="4" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <tube name="A" rmin="0" rmax="0.002" z="4" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+  </solids>
+  <structure>
+    <volume name="FWire">
+      <materialref ref="Al"/>
+      <solidref ref="C"/>
+    </volume>
+    <volume name="AWire">
+      <materialref ref="Al"/>
+      <solidref ref="A"/>
+    </volume>
+    <volume name="Comsol">
+      <materialref ref="He"/>
+      <solidref ref="Comsol0x1"/>
+      <physvol name="FWire_0" copynumber="0">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_0inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_1" copynumber="1">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_1inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_2" copynumber="2">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_2inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_3" copynumber="3">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_3inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_4" copynumber="4">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_4inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_0" copynumber="0">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_0inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_5" copynumber="5">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_5inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_6" copynumber="6">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_6inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_7" copynumber="7">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_7inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_8" copynumber="8">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_8inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_9" copynumber="9">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_9inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_10" copynumber="10">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_10inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_1" copynumber="1">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_1inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_11" copynumber="11">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_11inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_12" copynumber="12">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_12inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_13" copynumber="13">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_13inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_14" copynumber="14">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_14inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_15" copynumber="15">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_15inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_16" copynumber="16">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_16inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_2" copynumber="2">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_2inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_17" copynumber="17">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_17inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_21" copynumber="21">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_21inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_22" copynumber="22">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_22inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_23" copynumber="23">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_23inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_24" copynumber="24">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_24inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_25" copynumber="25">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_25inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_3" copynumber="3">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_3inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_26" copynumber="26">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_26inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_27" copynumber="27">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_27inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_28" copynumber="28">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_28inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_29" copynumber="29">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_29inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_30" copynumber="30">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_30inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_31" copynumber="31">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_31inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_4" copynumber="4">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_4inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_32" copynumber="32">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_32inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_33" copynumber="33">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_33inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_34" copynumber="34">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_34inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_35" copynumber="35">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_35inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_36" copynumber="36">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_36inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_37" copynumber="37">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_37inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_5" copynumber="5">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_5inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_38" copynumber="38">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_38inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_42" copynumber="42">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_42inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_43" copynumber="43">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_43inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_44" copynumber="44">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_44inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_45" copynumber="45">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_45inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_46" copynumber="46">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_46inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_6" copynumber="6">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_6inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_47" copynumber="47">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_47inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_48" copynumber="48">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_48inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_49" copynumber="49">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_49inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_50" copynumber="50">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_50inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_51" copynumber="51">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_51inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_52" copynumber="52">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_52inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_7" copynumber="7">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_7inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_53" copynumber="53">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_53inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_54" copynumber="54">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_54inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_55" copynumber="55">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_55inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_56" copynumber="56">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_56inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_57" copynumber="57">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_57inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_58" copynumber="58">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_58inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_8" copynumber="8">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_8inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_59" copynumber="59">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_59inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_63" copynumber="63">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_63inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_64" copynumber="64">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_64inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_65" copynumber="65">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_65inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_66" copynumber="66">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_66inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_67" copynumber="67">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_67inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_9" copynumber="9">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_9inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_68" copynumber="68">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_68inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_69" copynumber="69">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_69inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_70" copynumber="70">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_70inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_71" copynumber="71">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_71inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_72" copynumber="72">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_72inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_73" copynumber="73">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_73inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_10" copynumber="10">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_10inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_74" copynumber="74">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_74inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_75" copynumber="75">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_75inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_76" copynumber="76">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_76inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_77" copynumber="77">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_77inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_78" copynumber="78">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_78inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_79" copynumber="79">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_79inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_11" copynumber="11">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_11inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_80" copynumber="80">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_80inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_84" copynumber="84">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_84inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_85" copynumber="85">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_85inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_86" copynumber="86">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_86inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_87" copynumber="87">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_87inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_88" copynumber="88">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_88inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_12" copynumber="12">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_12inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_89" copynumber="89">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_89inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_90" copynumber="90">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_90inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_91" copynumber="91">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_91inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_92" copynumber="92">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_92inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_93" copynumber="93">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_93inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_94" copynumber="94">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_94inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_13" copynumber="13">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_13inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_95" copynumber="95">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_95inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_96" copynumber="96">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_96inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_97" copynumber="97">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_97inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_98" copynumber="98">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_98inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_99" copynumber="99">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_99inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_100" copynumber="100">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_100inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_14" copynumber="14">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_14inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_101" copynumber="101">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_101inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_105" copynumber="105">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_105inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_106" copynumber="106">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_106inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_107" copynumber="107">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_107inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_108" copynumber="108">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_108inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_109" copynumber="109">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_109inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_15" copynumber="15">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_15inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_110" copynumber="110">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_110inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_111" copynumber="111">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_111inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_112" copynumber="112">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_112inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_113" copynumber="113">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_113inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_114" copynumber="114">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_114inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_115" copynumber="115">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_115inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_16" copynumber="16">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_16inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_116" copynumber="116">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_116inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_117" copynumber="117">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_117inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_118" copynumber="118">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_118inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_119" copynumber="119">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_119inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_120" copynumber="120">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_120inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_121" copynumber="121">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_121inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_17" copynumber="17">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_17inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_122" copynumber="122">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_122inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_126" copynumber="126">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_126inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_127" copynumber="127">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_127inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_128" copynumber="128">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_128inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_129" copynumber="129">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_129inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_130" copynumber="130">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_130inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_18" copynumber="18">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_18inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_131" copynumber="131">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_131inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_132" copynumber="132">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_132inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_133" copynumber="133">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_133inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_134" copynumber="134">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_134inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_135" copynumber="135">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_135inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_136" copynumber="136">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_136inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_19" copynumber="19">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_19inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_137" copynumber="137">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_137inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_138" copynumber="138">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_138inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_139" copynumber="139">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_139inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_140" copynumber="140">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_140inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_141" copynumber="141">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_141inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_142" copynumber="142">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_142inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_20" copynumber="20">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_20inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_143" copynumber="143">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_143inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_147" copynumber="147">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_147inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_148" copynumber="148">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_148inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_149" copynumber="149">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_149inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_150" copynumber="150">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_150inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_151" copynumber="151">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_151inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_21" copynumber="21">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_21inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_152" copynumber="152">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_152inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_153" copynumber="153">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_153inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_154" copynumber="154">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_154inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_155" copynumber="155">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_155inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_156" copynumber="156">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_156inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_157" copynumber="157">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_157inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_22" copynumber="22">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_22inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_158" copynumber="158">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_158inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_159" copynumber="159">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_159inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_160" copynumber="160">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_160inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_161" copynumber="161">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_161inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_162" copynumber="162">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_162inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_163" copynumber="163">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_163inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_23" copynumber="23">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_23inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_164" copynumber="164">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_164inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_168" copynumber="168">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_168inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_169" copynumber="169">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_169inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_170" copynumber="170">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_170inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_171" copynumber="171">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_171inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_172" copynumber="172">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_172inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_24" copynumber="24">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_24inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_173" copynumber="173">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_173inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_174" copynumber="174">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_174inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_175" copynumber="175">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_175inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_176" copynumber="176">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_176inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_177" copynumber="177">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_177inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_178" copynumber="178">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_178inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_25" copynumber="25">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_25inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_179" copynumber="179">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_179inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_180" copynumber="180">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_180inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_181" copynumber="181">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_181inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_182" copynumber="182">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_182inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_183" copynumber="183">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_183inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_184" copynumber="184">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_184inComsolpos"/>
+      </physvol>
+      <physvol name="AWire_26" copynumber="26">
+        <volumeref ref="AWire"/>
+        <positionref ref="AWire_26inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_185" copynumber="185">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_185inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_194" copynumber="194">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_194inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_195" copynumber="195">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_195inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_196" copynumber="196">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_196inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_197" copynumber="197">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_197inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_198" copynumber="198">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_198inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_199" copynumber="199">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_199inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_200" copynumber="200">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_200inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_201" copynumber="201">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_201inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_202" copynumber="202">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_202inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_18" copynumber="18">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_18inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_19" copynumber="19">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_19inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_20" copynumber="20">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_20inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_39" copynumber="39">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_39inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_40" copynumber="40">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_40inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_41" copynumber="41">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_41inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_60" copynumber="60">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_60inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_61" copynumber="61">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_61inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_62" copynumber="62">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_62inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_81" copynumber="81">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_81inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_82" copynumber="82">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_82inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_83" copynumber="83">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_83inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_102" copynumber="102">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_102inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_103" copynumber="103">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_103inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_104" copynumber="104">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_104inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_123" copynumber="123">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_123inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_124" copynumber="124">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_124inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_125" copynumber="125">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_125inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_144" copynumber="144">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_144inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_145" copynumber="145">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_145inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_146" copynumber="146">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_146inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_165" copynumber="165">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_165inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_166" copynumber="166">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_166inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_167" copynumber="167">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_167inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_186" copynumber="186">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_186inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_187" copynumber="187">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_187inComsolpos"/>
+      </physvol>
+      <physvol name="FWire_188" copynumber="188">
+        <volumeref ref="FWire"/>
+        <positionref ref="FWire_188inComsolpos"/>
+      </physvol>
+    </volume>
+    <volume name="World">
+      <materialref ref="Vacuum"/>
+      <solidref ref="World"/>
+      <physvol name="Comsol_1" copynumber="1">
+        <volumeref ref="Comsol"/>
+        <positionref ref="Comsol_1inWorldpos"/>
+      </physvol>
+    </volume>
+  </structure>
+  <setup name="default" version="1.0">
+    <world ref="World"/>
+  </setup>
+</gdml>
