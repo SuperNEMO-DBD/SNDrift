@@ -21,6 +21,8 @@ in form of a ROOT file.
 
 ## Description
 
+Depends on: ROOT, tested with version 6.14.xx
+
 To build it, do
 
 ``` console
