@@ -124,9 +124,11 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
   int elcharge;
   Point3 exyz; // Drift field
   Point3 point;
+  Point3 previous;
   bool analytic = false; // default False
 
   point = q.location; // start location, Point3 object; [cm] from ROOT
+  previous = point;
 
   // starting TVector3 from point
   distance_sum.SetXYZ(point.xc()*0.01,point.yc()*0.01,point.zc()*0.01); // [cm]->[m]
@@ -176,8 +178,9 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
 	    
     // collision decision
     if (prob <= (kv/kmax)) {
-      // nsteps += 1; // collision occurred
-      // if (nsteps>=5000) analytic = true; // stop after n steps
+      //      nsteps += 1; // collision occurred
+      //      if (!(nsteps % 10000)) std::cout << "collision " << nsteps << " : x,y coordinates " << point.xc() << " " << point.yc() << std::endl;
+      //      if (nsteps>=5000) analytic = true; // stop after n steps
       // book position of collision
       distance_step = d_update(speed,running_time);
       distance_sum += distance_step; // in [m]
@@ -196,14 +199,13 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
 
       if (analytic) {
 	book_time(time_sum); // e- stopping, record time
-	book_place(point); // stop location
+	book_place(previous); // stop location
       }
-      // reset system
+      // reset system, continue
       running_time = 0.0;
+      previous = point;
       target_mass = pick_target(weight, which);
-      mumass_eV = 1.0e9 * e_mass * target_mass / (e_mass + target_mass);
-      localdensity = density * 6.023e26 / target_mass;// convert to number density [m^-3]
-      tau = 1/(localdensity * kmax);
+      mumass_eV = 1.0e9 * e_mass * target_mass / (e_mass + target_mass); // kinematics only
     }
     if (time_sum>=1.0e-5) { // 10 mus, particle got stuck, roughly 10^7 collisions
       analytic = true; // Stop
@@ -263,6 +265,8 @@ bool Ctransport::run(Electrode* electrode) {
 void Ctransport::book_charge(charge_t q) {
   std::lock_guard<std::mutex> lck (mtx); // protect thread access
   charges.push_back(q); // total charge list to be filled/drained in threads
+  // avalanche feedback
+  if (!(charges.size() % 10000)) std::cout << "charges booked " << charges.size() << std::endl;
   return;
 }
 
