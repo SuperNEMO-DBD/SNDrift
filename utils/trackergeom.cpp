@@ -40,7 +40,8 @@ void trackervol()
   double halfheight = 2.0; // z is not relevant here but make some space
 
   double wirerad = 0.0025; // 25 mum wire radius as in Comsol
-  double anoderad = 0.002; // 20 mum wire radius as in Comsol
+  //  double anoderad = 0.002; // 20 mum wire radius as in Comsol
+  double geigerrad = 0.003; // 30 mum safer wire radius against massive Geiger avalanche
 
   // geo translation constants, wire centre to centre
   double fw2fw = 0.911; // field wire spacing 9.11 mm
@@ -49,7 +50,7 @@ void trackervol()
 
   // make shape components
   TGeoTube *fwtub  = new TGeoTube("C",0,wirerad,halfheight);
-  TGeoTube *atub  = new TGeoTube("A",0,anoderad,halfheight);
+  TGeoTube *atub  = new TGeoTube("A",0,geigerrad,halfheight);
 
   TGeoVolume* world = geom->MakeBox("World",med,4*xhalf+0.1,4*yhalf+0.1,halfheight+0.1); // larger than rest
   TGeoVolume* comsol = geom->MakeBox("Comsol",tgasmed,xhalf,yhalf,halfheight); // field volume
@@ -108,25 +109,25 @@ void trackervol()
   //  geom->Export("trackergeom.gdml");
 
   // numerical volume position check
-  // double xcurrent, ycurrent;
-  // double xv =  2.6782; // xstart
-  // double yv = -0.7002; // row
-  // double xv =  3.5952; // xstart
-  // double yv = -2.9002; // row
-  // double zv = 0.0;
-  // step through geom
-  // for (int n=0;n<10;n++) {
-  //   xcurrent = xv + n*0.001;
-  //   ycurrent = yv;
-  //   geom->SetCurrentPoint(xcurrent, ycurrent, zv);
-  //   TGeoNode* nd = geom->FindNode();
-  //   TGeoVolume* vol = nd->GetVolume();
+  double xcurrent, ycurrent;
+  double xv =  3.4; // xstart
+  double yv = -2.9; // row
+  // double xv =  3.56486; // xstart
+  // double yv = -2.89117; // row
+  double zv = 0.0;
+  //  step through geom
+  for (int n=0;n<210;n++) {
+    xcurrent = xv + n*0.001;
+    ycurrent = yv;
+    geom->SetCurrentPoint(xcurrent, ycurrent, zv);
+    TGeoNode* nd = geom->FindNode();
+    TGeoVolume* vol = nd->GetVolume();
     
-  //   TString region(vol->GetName()); // changed from GetNumber()
-  //   std::cout << "Geometry model: region = " << region << std::endl;
-  //   std::cout << "Geometry model: coords: " << xcurrent << " " << ycurrent << " " << zv << std::endl;
-  // }
-  world->Draw();
+    TString region(vol->GetName()); // changed from GetNumber()
+    std::cout << "Geometry model: region = " << region << std::endl;
+    std::cout << "Geometry model: coords: " << xcurrent << " " << ycurrent << " " << zv << std::endl;
+  }
+  //  world->Draw();
 
 }
 

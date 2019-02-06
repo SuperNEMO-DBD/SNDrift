@@ -139,7 +139,7 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
   exyz = electrode->getFieldValue(analytic,point); // [V/m]
 
   // debug
-  //  int nsteps = 0;
+  int nsteps = 0;
 
   // transport loop
   while (!analytic) { 
@@ -178,8 +178,8 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
 	    
     // collision decision
     if (prob <= (kv/kmax)) {
-      //      nsteps += 1; // collision occurred
-      //      if (!(nsteps % 10000)) std::cout << "collision " << nsteps << " : x,y coordinates " << point.xc() << " " << point.yc() << std::endl;
+      nsteps += 1; // collision occurred
+      if (!(nsteps % 100000)) std::cout << "collision " << nsteps << " : x,y coordinates " << point.xc() << " " << point.yc() << std::endl;
       //      if (nsteps>=5000) analytic = true; // stop after n steps
       // book position of collision
       distance_step = d_update(speed,running_time);
@@ -200,6 +200,7 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
       if (analytic) {
 	book_time(time_sum); // e- stopping, record time
 	book_place(previous); // stop location
+	//	std::cout << "stop collision " << nsteps << " : current point " << point.xc() << " " << point.yc() << " " << point.zc() << std::endl;
       }
       // reset system, continue
       running_time = 0.0;
@@ -287,6 +288,10 @@ void Ctransport::book_place(Point3 loc) {
 
 int Ctransport::findBin(double en) {
   std::lock_guard<std::mutex> lck (mtx); // protect thread access
+  // caution on energy
+  if (en<0.0) en = 0.0;
+  if (en>=40.0) en = 39.9; // max range from MagBoltz cross sections
+
   std::vector<double>::iterator low;
   low = std::lower_bound(energybins.begin(), energybins.end(), en); // find index with lower bound
   int bin = (low - energybins.begin());
@@ -316,7 +321,7 @@ TVector3 Ctransport::d_update(TVector3 v0, double time)
 TVector3 Ctransport::kin_factor2(TVector3 v0, double target_mass)
 {
     TVector3 vel = v0;
-    double theta0 = v0.Theta();
+    //    double theta0 = v0.Theta();
     double phi0 = v0.Phi();
     double energy, transfer;
     double c2 = 2.99792458e8*2.99792458e8; // c^2 [m/s]^2
@@ -327,13 +332,13 @@ TVector3 Ctransport::kin_factor2(TVector3 v0, double target_mass)
     energy = 0.5 * mumass_eV * v0.Mag2() / c2; // non-rel. energy in [eV]
     double azimuth = angle_function2(energy);
     // TVector3 has theta defined relative to +z axis
-    double theta = -TMath::Pi()/2.0 + TMath::Pi()*rnd->Rndm();//isotropic theta for now
+    double theta = TMath::Pi()/2.0;// in plane theta
 
     // double phi = 0.5*TMath::ASin((target_mass + e_mass)/target_mass*TMath::Sin(theta));
     // transfer = TMath::Sqrt((1.0 - reduced_mass * TMath::Cos(phi)*TMath::Cos(phi)));
 
-    vel.SetTheta(theta+theta0); // relative to old theta
-    vel.SetPhi(azimuth+phi0);
+    vel.SetTheta(theta);
+    vel.SetPhi(azimuth+phi0); // relative to previous
     return vel;
 }
 
@@ -391,10 +396,6 @@ double Ctransport::cross_section(double energy, int which, int &inel_flag)
   double cs_el, cs_inel,ratio;
   int bin;
   
-  // caution on energy
-  if (energy<0.0) energy = 0.0;
-  if (energy>=40.0) energy = 39.98; // max range from MagBoltz cross sections
-
   inel_flag = 0; // default case
   bin = findBin(energy);
 

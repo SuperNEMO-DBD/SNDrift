@@ -246,7 +246,7 @@
     <box name="World" x="64.200000000000003" y="173.79999999999998" z="4.2000000000000002" lunit="cm"/>
     <box name="Comsol0x1" x="16" y="43.399999999999999" z="4" lunit="cm"/>
     <tube name="C" rmin="0" rmax="0.0025000000000000001" z="4" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
-    <tube name="A" rmin="0" rmax="0.002" z="4" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <tube name="A" rmin="0" rmax="0.0030000000000000001" z="4" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
   </solids>
   <structure>
     <volume name="FWire">
