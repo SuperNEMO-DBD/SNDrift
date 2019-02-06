@@ -139,7 +139,7 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
   exyz = electrode->getFieldValue(analytic,point); // [V/m]
 
   // debug
-  int nsteps = 0;
+  //  int nsteps = 0;
 
   // transport loop
   while (!analytic) { 
@@ -165,7 +165,6 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
       cc.chargeID = 1; // was an electron
       cc.charge = -1; //
       book_charge(cc); // store in object container
-      //      std::cout << "inelastic collision electron booked at energy " << energy << std::endl;
     }
     
     if (kv>=kmax) {
@@ -178,8 +177,8 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
 	    
     // collision decision
     if (prob <= (kv/kmax)) {
-      nsteps += 1; // collision occurred
-      if (!(nsteps % 100000)) std::cout << "collision " << nsteps << " : x,y coordinates " << point.xc() << " " << point.yc() << std::endl;
+      //      nsteps += 1; // collision occurred
+      //      if (!(nsteps % 100000)) std::cout << "collision " << nsteps << " : x,y coordinates " << point.xc() << " " << point.yc() << std::endl;
       //      if (nsteps>=5000) analytic = true; // stop after n steps
       // book position of collision
       distance_step = d_update(speed,running_time);
@@ -265,9 +264,11 @@ bool Ctransport::run(Electrode* electrode) {
 
 void Ctransport::book_charge(charge_t q) {
   std::lock_guard<std::mutex> lck (mtx); // protect thread access
+  // avalanche limit - hard cut on number of charges
+  if (charges.size() > 1000) return;
   charges.push_back(q); // total charge list to be filled/drained in threads
   // avalanche feedback
-  if (!(charges.size() % 10000)) std::cout << "charges booked " << charges.size() << std::endl;
+  //  if (!(charges.size() % 500)) std::cout << "charges booked " << charges.size() << std::endl;
   return;
 }
 
@@ -290,7 +291,7 @@ int Ctransport::findBin(double en) {
   std::lock_guard<std::mutex> lck (mtx); // protect thread access
   // caution on energy
   if (en<0.0) en = 0.0;
-  if (en>=40.0) en = 39.9; // max range from MagBoltz cross sections
+  if (en>=40.0) return (int)energybins.size()-1; // final entry
 
   std::vector<double>::iterator low;
   low = std::lower_bound(energybins.begin(), energybins.end(), en); // find index with lower bound
@@ -366,6 +367,7 @@ void Ctransport::readCS(std::string csname) {
     HeCSel.push_back(csel[i] * 1.e-4); // convert to SI [m^2]
     HeCSinel.push_back(csinel[i] * 1.e-4);
   }
+  std::cout << "In CTransport: helium cross sections from file: " << nentries << std::endl;
 
   // set up ethanol cs
   nentries = nt->Draw("csel:csinel","weight>0.02 && weight<0.5","goff"); // for ethanol cs histogram
@@ -375,6 +377,7 @@ void Ctransport::readCS(std::string csname) {
     EthCSel.push_back(csel[i] * 1.e-4);
     EthCSinel.push_back(csinel[i] * 1.e-4);
   }
+  std::cout << "In CTransport: ethanol cross sections from file: " << nentries << std::endl;
 
   // set up argon cs
   nentries = nt->Draw("csel:csinel","weight<0.02","goff"); // for argon cs histogram
@@ -385,7 +388,7 @@ void Ctransport::readCS(std::string csname) {
     ArCSinel.push_back(csinel[i] * 1.e-4);
   }
   ff.Close();
-  std::cout << "In CTransport: read cross sections from file: " << nentries << " for each gas component" << std::endl;
+  std::cout << "In CTransport: argon cross sections from file: " << nentries << std::endl;
 }
 
 
@@ -394,11 +397,15 @@ double Ctransport::cross_section(double energy, int which, int &inel_flag)
 {
   // retrieve from MagBoltz output file.
   double cs_el, cs_inel,ratio;
-  int bin;
+  int bin = findBin(energy);
   
   inel_flag = 0; // default case
-  bin = findBin(energy);
 
+  // shouldn't happen but does, it seems
+  if (bin>=(int)energybins.size()) 
+    bin = (int)energybins.size()-1; // final entry
+  if (energy >= 40.0) energy = 39.9; // max range of energybins from MagBoltz
+ 
   // debug
   // if (energy>10.0) 
   //   std::cout << "Inside cross section with en " << energy << " gas which " << which << " and energy bin " << bin << std::endl;
@@ -411,6 +418,7 @@ double Ctransport::cross_section(double energy, int which, int &inel_flag)
       ratio = cs_inel / (cs_el+cs_inel);
       if (rnd->Rndm() < ratio) {
 	inel_flag = 1; // ionization electron
+	//	std::cout << "helium inelastic collision at energy " << energy << std::endl;
 	return 0.0; // stops further transport after inel
       }
       else
@@ -426,6 +434,7 @@ double Ctransport::cross_section(double energy, int which, int &inel_flag)
       ratio = cs_inel / (cs_el+cs_inel);
       if (rnd->Rndm() < ratio) {
 	inel_flag = 1; // ionization electron
+	//	std::cout << "ethanol inelastic collision at energy " << energy << std::endl;
 	return 0.0; // stops further transport after inel
       }
       else
@@ -441,6 +450,7 @@ double Ctransport::cross_section(double energy, int which, int &inel_flag)
       ratio = cs_inel / (cs_el+cs_inel);
       if (rnd->Rndm() < ratio) {
 	inel_flag = 1; // ionization electron
+	//	std::cout << "argon inelastic collision at energy " << energy << std::endl;
 	return 0.0; // stops further transport after inel
       }
       else
