@@ -41,6 +41,8 @@ void Ctransport::ctransport(Electrode* electrode, std::list<charge_t> q) {
     return;
   }
   // got all charges as initial input
+  times.clear();
+  places.clear();
   charges.clear(); // copy to data member
   for (charge_t cc : q) {
     charges.push_front(cc); // insert from front
@@ -222,7 +224,8 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
 bool Ctransport::run(Electrode* electrode) {
   bool flag = false;
   // First, prepare electrode object for transport
-  electrode->initfields(); // ready to transport
+  if (!electrode->isactive()) // not to repeat init
+    electrode->initfields(); // ready to transport
 
   unsigned int nthreads = std::thread::hardware_concurrency();
   if (nthreads>4) nthreads = 4; // limit max CPU number

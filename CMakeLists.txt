@@ -45,6 +45,9 @@ target_link_libraries(transportlib ${ROOT_LIBRARIES})
 add_executable(scan.exe examples/scan.cpp)
 target_link_libraries(scan.exe ${ROOT_LIBRARIES} transportlib)
 
+add_executable(mcdrift.exe examples/mcdrift.cpp)
+target_link_libraries(mcdrift.exe ${ROOT_LIBRARIES} transportlib)
+
 # Build the testing code, tell CTest about it
 enable_testing()
 set(CMAKE_CXX_STANDARD 11)

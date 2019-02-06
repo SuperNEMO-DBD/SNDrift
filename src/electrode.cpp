@@ -8,7 +8,7 @@
 Electrode::Electrode(ComsolFields* fem, GeometryModel* g) {
   gm = g;
   femfields = fem;
-
+  active = false;
   field = 0;
 }
 
@@ -20,6 +20,7 @@ Electrode::~Electrode() {
 
 
 void Electrode::initfields() {
+  active = true;
   field = new Fields(femfields, gm); // create from file + geometry info
 }
 

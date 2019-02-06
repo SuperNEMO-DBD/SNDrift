@@ -16,6 +16,7 @@
 //***********************************
 class Electrode {
  private:
+  bool active;
   // pointer to geometry for constructing fields
   GeometryModel* gm;
   // pointer to comsol fields for constructing fields
@@ -36,6 +37,7 @@ class Electrode {
 
   // access
   void initfields(); // out of constructor - takes time.
+  bool isactive() {return active;}
 
   Point3 getFieldValue(bool& analytic, Point3 p);
 };
