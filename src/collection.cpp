@@ -358,9 +358,9 @@ double Ctransport::angle_function2(double energy)
   const double p5 = 64.01;
   double r = rnd->Rndm();
   double sqre = TMath::Sqrt(energy);
-  double xi = 1.0 + (p1 * sqre - p2*p2 - p3) / ((sqre - p2)*(sqre - p2)  +p3) - p1*sqre / ((sqre - p4)*(sqre - p4) + p5);
+  double xi = 1.0 + (p1 * sqre - p2*p2 - p3) / ((sqre - p2)*(sqre - p2) + p3) - p1*sqre / ((sqre - p4)*(sqre - p4) + p5);
   double nom = 2*r * (1.0 - xi);
-  double denom = 1.0 + xi * (1.0 - 2*r)
+  double denom = 1.0 + xi * (1.0 - 2*r);
   return TMath::ACos(1.0 - nom / denom);
 }
 
