@@ -268,10 +268,10 @@ bool Ctransport::run(Electrode* electrode) {
 void Ctransport::book_charge(charge_t q) {
   std::lock_guard<std::mutex> lck (mtx); // protect thread access
   // avalanche limit - hard cut on number of charges
-  if (charges.size() > 1000) return;
+  if (charges.size() > 100) return;
   charges.push_back(q); // total charge list to be filled/drained in threads
-  // avalanche feedback
-  //  if (!(charges.size() % 500)) std::cout << "charges booked " << charges.size() << std::endl;
+  // feedback for big avalanches
+  //  if (!(charges.size() % 10000)) std::cout << "charges booked " << charges.size() << std::endl;
   return;
 }
 

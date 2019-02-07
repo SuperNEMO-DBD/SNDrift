@@ -22,7 +22,7 @@
 #include "TParameter.h"
 
 void showHelp() {
-  std::cout << "collection scan command line option(s) help" << std::endl;
+  std::cout << "Monte-Carlo scan command line option(s) help" << std::endl;
   std::cout << "\t -x , --xstart <x-coordinate start [cm]>" << std::endl;
   std::cout << "\t -y , --ystart <y-coordinate start [cm]>" << std::endl;
   std::cout << "\t -b , --bias <Anode bias in Volt>" << std::endl;
@@ -105,6 +105,8 @@ void signal_calculation(int seed, int nsim, double bias, double xstart, double y
     ctr->ctransport(anode, hits);
     std::vector<double> dts = ctr->getDriftTimes();
     timestore.push_back(*std::max_element(dts.begin(), dts.end()));
+    // some feedback
+    std::cout << "drift time: " << *std::max_element(dts.begin(), dts.end()) << std::endl;
   }
 
   //----------------------------------------------------------
