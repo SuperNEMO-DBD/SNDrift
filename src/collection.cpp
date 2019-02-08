@@ -268,7 +268,7 @@ bool Ctransport::run(Electrode* electrode) {
 void Ctransport::book_charge(charge_t q) {
   std::lock_guard<std::mutex> lck (mtx); // protect thread access
   // avalanche limit - hard cut on number of charges
-  if (charges.size() > 100) return;
+  if (charges.size() > 10) return;
   charges.push_back(q); // total charge list to be filled/drained in threads
   // feedback for big avalanches
   //  if (!(charges.size() % 10000)) std::cout << "charges booked " << charges.size() << std::endl;
@@ -324,26 +324,27 @@ TVector3 Ctransport::d_update(TVector3 v0, double time)
 
 TVector3 Ctransport::kin_factor2(TVector3 v0, double target_mass)
 {
-    TVector3 vel = v0;
-    //    double theta0 = v0.Theta();
-    double phi0 = v0.Phi();
-    double energy, transfer;
-    double c2 = 2.99792458e8*2.99792458e8; // c^2 [m/s]^2
-    double e_mass = 0.511e-3; // [GeV/c^2]
-    double reduced_mass = (4.0*target_mass*e_mass)/((target_mass + e_mass)*(target_mass + e_mass));
-    double mumass_eV = 1.0e9 * e_mass * target_mass / (e_mass + target_mass); // [eV]
-
-    energy = 0.5 * mumass_eV * v0.Mag2() / c2; // non-rel. energy in [eV]
-    if (target_mass < 5.0)
-      double azimuth = angle_function2(energy); // Helium
-    else
-      double azimuth = TMath::Pi() * rnd->Rndm(); // isotropic for rare other targets
-    // TVector3 has theta defined relative to +z axis
-    double theta = TMath::Pi()/2.0;// in plane theta
-
-    vel.SetTheta(theta);
-    vel.SetPhi(azimuth+phi0); // relative to previous
-    return vel;
+  double azimuth;
+  TVector3 vel = v0;
+  //    double theta0 = v0.Theta();
+  double phi0 = v0.Phi();
+  double energy, transfer;
+  double c2 = 2.99792458e8*2.99792458e8; // c^2 [m/s]^2
+  double e_mass = 0.511e-3; // [GeV/c^2]
+  double reduced_mass = (4.0*target_mass*e_mass)/((target_mass + e_mass)*(target_mass + e_mass));
+  double mumass_eV = 1.0e9 * e_mass * target_mass / (e_mass + target_mass); // [eV]
+  
+  energy = 0.5 * mumass_eV * v0.Mag2() / c2; // non-rel. energy in [eV]
+  if (target_mass < 5.0)
+    azimuth = angle_function2(energy); // Helium
+  else
+    azimuth = TMath::Pi() * rnd->Rndm(); // isotropic for rare other targets
+  // TVector3 has theta defined relative to +z axis
+  double theta = TMath::Pi()/2.0;// in plane theta
+  
+  vel.SetTheta(theta);
+  vel.SetPhi(azimuth+phi0); // relative to previous
+  return vel;
 }
 
 double Ctransport::angle_function2(double energy)
