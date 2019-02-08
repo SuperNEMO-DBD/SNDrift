@@ -2,7 +2,8 @@
 
 
 Yorck Ramachers (Warwick)
-Last updated February 4, 2019
+
+Last updated February 8, 2019
 
 The SNDrift code platform attempts to simulate electron drift in the
 SuperNEMO tracker gas, defined as Helium (95%), Ethanol (4%) and
