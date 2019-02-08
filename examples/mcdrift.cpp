@@ -28,6 +28,7 @@ void showHelp() {
   std::cout << "\t -b , --bias <Anode bias in Volt>" << std::endl;
   std::cout << "\t -s , --seed <random number seed offset>" << std::endl;
   std::cout << "\t -n , --nsim <number of Monte Carlo simulations>" << std::endl;
+  std::cout << "\t -d , --dataDir <FULL PATH Directory to data file>" << std::endl;
   std::cout << "\t -o , --outputFile <FULL PATH ROOT FILENAME>" << std::endl;
 }
 
@@ -53,6 +54,7 @@ int main(int argc, char** argv) {
   ops >> GetOpt::Option('b', "bias", bias, 1000.0);
   ops >> GetOpt::Option('s', "seed", seed, 0);
   ops >> GetOpt::Option('n', "nsim", nsim, 10);
+  ops >> GetOpt::Option('d', dataDirName, "data/");
   ops >> GetOpt::Option('o', outputFileName, "");
 
   if (outputFileName=="")
@@ -79,18 +81,19 @@ void signal_calculation(int seed, int nsim, double bias, double xstart, double y
 
   //----------------------------------------------------------
   // Geometry
-  const char* gfname = "data/trackergeom.gdml";
+  std::string gfname = dataDirName+"trackergeom.gdml";
   GeometryModel* gmodel = new GeometryModel(gfname);
 
   //----------------------------------------------------------
   // FEM fields from file
   // hard-coded field map files
-  ComsolFields* fem = new ComsolFields("data/sntracker_driftField.root");
+  std::string femname = dataDirName+"sntracker_driftField.root";
+  ComsolFields* fem = new ComsolFields(femname.data());
   fem->setBias(bias);
 
   //----------------------------------------------------------
   // Transport
-  std::string fn = "data/trackergasCS.root";
+  std::string fn = dataDirName+"trackergasCS.root";
   Ctransport* ctr = new Ctransport(fn, seed);
   // setting up
 
