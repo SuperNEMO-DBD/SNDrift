@@ -36,10 +36,11 @@ void showHelp() {
 
 int main(int argc, char** argv) {
   // function declare
-  void signal_calculation(int seed, int nsim, double bias, double xstart, double ystart, std::string fname);
+  void signal_calculation(int seed, int nsim, double bias, double xstart, double ystart, std::string data, std::string fname);
 
   int seed, nsim;
   double bias, xs, ys;
+  std::string dataDirName;
   std::string outputFileName;
   GetOpt::GetOpt_pp ops(argc, argv);
 
@@ -61,14 +62,14 @@ int main(int argc, char** argv) {
     outputFileName = "drifttimes.root";
 
   //run the code
-  signal_calculation(seed, nsim, bias, xs, ys, outputFileName);
+  signal_calculation(seed, nsim, bias, xs, ys, dataDirName, outputFileName);
   
   return 0;
 }
 
 
 
-void signal_calculation(int seed, int nsim, double bias, double xstart, double ystart, std::string fname) {
+void signal_calculation(int seed, int nsim, double bias, double xstart, double ystart, std::string dataDirName, std::string fname) {
 
   charge_t hit;
   Point3 loc(xstart, ystart, 0.0); // [cm] unit from root geometry
@@ -82,7 +83,7 @@ void signal_calculation(int seed, int nsim, double bias, double xstart, double y
   //----------------------------------------------------------
   // Geometry
   std::string gfname = dataDirName+"trackergeom.gdml";
-  GeometryModel* gmodel = new GeometryModel(gfname);
+  GeometryModel* gmodel = new GeometryModel(gfname.data());
 
   //----------------------------------------------------------
   // FEM fields from file
