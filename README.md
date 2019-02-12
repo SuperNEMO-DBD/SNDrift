@@ -17,7 +17,7 @@ can be scaled to realistic bias values on anode wires with
 a command line option.
 Transport follows the same algorithm used in Garfield++ and other
 microscopic charge transport codes, see below. Cross sections 
-have been obtained from MagBoltz and are available for reading
+have been obtained from Magboltz and are available for reading
 in form of a ROOT file.
 
 ## Description
@@ -44,8 +44,8 @@ $ ctest -V
 ```
 
 The build will create the `transportlib.so` shared library and (currently)
-the scan.exe executable in the build directory (from which you can run
-the executable, no problem).
+two executables in the build directory (from which you can run
+the executables, no problem).
 
 ## Utilities and Data
 
@@ -58,6 +58,21 @@ collection scan command line option(s) help
 	 -y , --ystart <y-coordinate start [cm]>
 	 -b , --bias <Anode bias in Volt>
 	 -s , --seed <random number seed offset>
+$
+```
+
+mcdrift.exe: command line options are:
+
+``` console
+$ ./build/mcdrift.exe --help
+Monte-Carlo scan command line option(s) help
+	 -x , --xstart <x-coordinate start [cm]>
+	 -y , --ystart <y-coordinate start [cm]>
+	 -b , --bias <Anode bias in Volt>
+	 -s , --seed <random number seed offset>
+	 -n , --nsim <number of Monte Carlo simulations>
+	 -d , --dataDir <FULL PATH Directory to data file>
+	 -o , --outputFile <FULL PATH ROOT FILENAME>
 $
 ```
 
@@ -95,7 +110,7 @@ geometry is in fact 2 cm thick in z such that diffusion in z is
 permitted to roughly the tracker z-resolution. Still, starting points
 are all at z=0 by default.
 
-The script to run MagBoltz is also included but clearly requires a 
+The script to run Magboltz is also included but clearly requires a 
 Garfield++ installation. It is adapted from the file Examples/GasFile/ 
 example shipped with Garfield++. If copied in that directory and 
 compiled with the existing makefile in that directory, one would 
@@ -169,3 +184,8 @@ the executable example. The three layers of 9-cell units extend in x-direction.
 Two image files are available in the utils folder, made in COMSOL, and show the 
 geometry and electrostatic field structure in more detail than can be achieved
 with the descriptions above.
+
+Ref: H. Schindler, Garfield++ User manual (2019), http://garfieldpp.web.cern.ch/garfieldpp/documentation/
+
+S. F. Biagi, Magboltz, http://magboltz.web.cern.ch/magboltz
+

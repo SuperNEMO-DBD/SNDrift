@@ -209,10 +209,12 @@ bool Ctransport::taskfunction(Electrode* electrode, charge_t q) {
       target_mass = pick_target(weight, which);
       mumass_eV = 1.0e9 * e_mass * target_mass / (e_mass + target_mass); // kinematics only
     }
-    if (time_sum>=1.0e-5) { // 10 mus, particle got stuck, roughly 10^7 collisions
-      analytic = true; // Stop
+    if (time_sum>=3.0e-5) { // 30 mus, particle got stuck, roughly 10^7 collisions
+      book_time(time_sum); // e- stopping, record time
+      book_place(previous); // stop location
       std::cout << "STUCK: time = " << time_sum << std::endl;
       std::cout << "STUCK: place= " << point.xc() << " " << point.yc() << std::endl;
+      return false;
     }
 
   }
