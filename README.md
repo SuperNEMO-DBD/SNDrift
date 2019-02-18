@@ -3,7 +3,7 @@
 
 Yorck Ramachers (Warwick)
 
-Last updated February 8, 2019
+Last updated February 18, 2019
 
 The SNDrift code platform attempts to simulate electron drift in the
 SuperNEMO tracker gas, defined as Helium (95%), Ethanol (4%) and
@@ -68,6 +68,7 @@ $ ./build/mcdrift.exe --help
 Monte-Carlo scan command line option(s) help
 	 -x , --xstart <x-coordinate start [cm]>
 	 -y , --ystart <y-coordinate start [cm]>
+	 -c , --ncharges <number of starter charges at x,y>
 	 -b , --bias <Anode bias in Volt>
 	 -s , --seed <random number seed offset>
 	 -n , --nsim <number of Monte Carlo simulations>
@@ -155,6 +156,17 @@ cases could then be considered separately like exotic starting points
 clustered around the circumference of a field-wire. How much slower, if 
 at all, arrive charges from outside a cell, near the calo walls or from 
 between foil and first tracker cells?
+
+Allowing for multiple charges at the start of a Monte-Carlo run improves 
+efficiency for cluster jobs. The option '-c' for mcdrift.exe allows for 
+this feature. The requested number of charges is randomly placed in a cube 
+of 2 micro metre side length (+-1 mum) around the starter position, i.e. 
+small enough not to impact drift times for those N charges. The N longest 
+drift times are then stored in the results. This way, one can get a statistic 
+of N charges started times a simulation repetition of nsim times the number 
+of jobs on a cluster to achieve a better statistics. Tests appear to 
+confirm that this mode of running saves time compared to single 
+starter charges.
 
 ## Simulation geometry
 
