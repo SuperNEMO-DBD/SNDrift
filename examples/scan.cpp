@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
     outputFileName = "avalanche.root";
 
   //run the code
-  signal_calculation(seed, bias, xs, ys, pr, outputFileName);
+  signal_calculation(seed, bias, xs, ys, pressure, outputFileName);
   
   return 0;
 }
