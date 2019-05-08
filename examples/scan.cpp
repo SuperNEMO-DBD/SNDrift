@@ -26,6 +26,7 @@ void showHelp() {
   std::cout << "\t -x , --xstart <x-coordinate start [cm]>" << std::endl;
   std::cout << "\t -y , --ystart <y-coordinate start [cm]>" << std::endl;
   std::cout << "\t -b , --bias <Anode bias in Volt>" << std::endl;
+  std::cout << "\t -p , --pressure <tracker gas pressure [mbar]>" << std::endl;
   std::cout << "\t -s , --seed <random number seed offset>" << std::endl;
   std::cout << "\t -o , --outputFile <FULL PATH ROOT FILENAME>" << std::endl;
 }
@@ -34,10 +35,10 @@ void showHelp() {
 
 int main(int argc, char** argv) {
   // function declare
-  void signal_calculation(int seed, double bias, double xstart, double ystart, std::string fname);
+  void signal_calculation(int seed, double bias, double xstart, double ystart, double pr, std::string fname);
 
   int seed;
-  double bias, xs, ys;
+  double bias, xs, ys, pressure;
   std::string outputFileName;
   GetOpt::GetOpt_pp ops(argc, argv);
 
@@ -50,6 +51,7 @@ int main(int argc, char** argv) {
   ops >> GetOpt::Option('x', "xstart", xs, 3.5);
   ops >> GetOpt::Option('y', "ystart", ys, -2.9);
   ops >> GetOpt::Option('b', "bias", bias, 1000.0);
+  ops >> GetOpt::Option('p', "pressure", pressure, 1013.25);
   ops >> GetOpt::Option('s', "seed", seed, 0);
   ops >> GetOpt::Option('o', outputFileName, "");
 
@@ -57,14 +59,14 @@ int main(int argc, char** argv) {
     outputFileName = "avalanche.root";
 
   //run the code
-  signal_calculation(seed, bias, xs, ys, outputFileName);
+  signal_calculation(seed, bias, xs, ys, pr, outputFileName);
   
   return 0;
 }
 
 
 
-void signal_calculation(int seed, double bias, double xstart, double ystart, std::string fname) {
+void signal_calculation(int seed, double bias, double xstart, double ystart, double pr, std::string fname) {
 
   charge_t hit;
   Point3 loc(xstart, ystart, 0.0); // [cm] unit from root geometry
@@ -90,6 +92,7 @@ void signal_calculation(int seed, double bias, double xstart, double ystart, std
   // Transport
   std::string fn = "data/trackergasCS.root";
   Ctransport* ctr = new Ctransport(fn, seed);
+  ctr->setDensity(0.1664 * pr / 1013.25); // [kg/m^3]  pr [mbar] / NTP (295K) helium gas density
   // setting up
 
   //----------------------------------------------------------

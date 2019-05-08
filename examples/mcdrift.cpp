@@ -29,6 +29,7 @@ void showHelp() {
   std::cout << "\t -b , --bias <Anode bias in Volt>" << std::endl;
   std::cout << "\t -s , --seed <random number seed offset>" << std::endl;
   std::cout << "\t -n , --nsim <number of Monte Carlo simulations>" << std::endl;
+  std::cout << "\t -p , --pressure <tracker gas pressure [mbar]>" << std::endl;
   std::cout << "\t -d , --dataDir <FULL PATH Directory to data file>" << std::endl;
   std::cout << "\t -o , --outputFile <FULL PATH ROOT FILENAME>" << std::endl;
 }
@@ -37,10 +38,10 @@ void showHelp() {
 
 int main(int argc, char** argv) {
   // function declare
-  void signal_calculation(int seed, int nsim, int ncharges, double bias, double xstart, double ystart, std::string data, std::string fname);
+  void signal_calculation(int seed, int nsim, int ncharges, double bias, double xstart, double ystart, double pr, std::string data, std::string fname);
 
   int seed, nsim, ncharges;
-  double bias, xs, ys;
+  double bias, xs, ys, pressure;
   std::string dataDirName;
   std::string outputFileName;
   GetOpt::GetOpt_pp ops(argc, argv);
@@ -57,6 +58,7 @@ int main(int argc, char** argv) {
   ops >> GetOpt::Option('b', "bias", bias, 1000.0);
   ops >> GetOpt::Option('s', "seed", seed, 0);
   ops >> GetOpt::Option('n', "nsim", nsim, 10);
+  ops >> GetOpt::Option('p', "pressure", pressure, 1013.25);
   ops >> GetOpt::Option('d', dataDirName, "");
   ops >> GetOpt::Option('o', outputFileName, "");
 
@@ -67,14 +69,14 @@ int main(int argc, char** argv) {
     outputFileName = "drifttimes.root";
 
   //run the code
-  signal_calculation(seed, nsim, ncharges, bias, xs, ys, dataDirName, outputFileName);
+  signal_calculation(seed, nsim, ncharges, bias, xs, ys, pressure, dataDirName, outputFileName);
   
   return 0;
 }
 
 
 
-void signal_calculation(int seed, int nsim, int ncharges, double bias, double xstart, double ystart, std::string dataDirName, std::string fname) {
+void signal_calculation(int seed, int nsim, int ncharges, double bias, double xstart, double ystart, double pr, std::string dataDirName, std::string fname) {
 
   TRandom3 rnd; // for starters only
   charge_t hit;
@@ -107,6 +109,7 @@ void signal_calculation(int seed, int nsim, int ncharges, double bias, double xs
   // Transport
   std::string fn = dataDirName+"trackergasCS.root";
   Ctransport* ctr = new Ctransport(fn, seed);
+  ctr->setDensity(0.1664 * pr / 1013.25); // [kg/m^3]  pr [mbar] / NTP (295K) helium gas density
   // setting up
 
   //----------------------------------------------------------
