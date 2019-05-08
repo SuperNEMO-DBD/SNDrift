@@ -57,7 +57,9 @@ collection scan command line option(s) help
 	 -x , --xstart <x-coordinate start [cm]>
 	 -y , --ystart <y-coordinate start [cm]>
 	 -b , --bias <Anode bias in Volt>
+	 -p , --pressure <tracker gas pressure [mbar]>
 	 -s , --seed <random number seed offset>
+	 -o , --outputFile <FULL PATH ROOT FILENAME>
 $
 ```
 
@@ -72,6 +74,7 @@ Monte-Carlo scan command line option(s) help
 	 -b , --bias <Anode bias in Volt>
 	 -s , --seed <random number seed offset>
 	 -n , --nsim <number of Monte Carlo simulations>
+	 -p , --pressure <tracker gas pressure [mbar]>
 	 -d , --dataDir <FULL PATH Directory to data file>
 	 -o , --outputFile <FULL PATH ROOT FILENAME>
 $
